@@ -6,4 +6,12 @@
     id="exampleFormControlFile1"
     (change)="onChange($event)"
   />
+  <button
+    type="button"
+    class="btn btn-primary"
+    (click)="onUpload()"
+    [disabled]="!files"
+  >
+    Upload
+  </button>
 </div>
