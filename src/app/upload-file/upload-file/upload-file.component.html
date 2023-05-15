@@ -6,6 +6,15 @@
     id="exampleFormControlFile1"
     (change)="onChange($event)"
   />
+  <div class="progress">
+    <div
+      class="progress-bar progress-bar-striped progress-bar-animated"
+      role="progressbar"
+      [style.width]="progress + '%'"
+    >
+      {{ progress }}%
+    </div>
+  </div>
   <button
     type="button"
     class="btn btn-primary"
@@ -15,3 +24,9 @@
     Upload
   </button>
 </div>
+<button type="button" class="btn btn-primary" (click)="onDownloadPDF()">
+  Download PDF
+</button>
+<button type="button" class="btn btn-primary" (click)="onDownloadExcel()">
+  Download Excel
+</button>
